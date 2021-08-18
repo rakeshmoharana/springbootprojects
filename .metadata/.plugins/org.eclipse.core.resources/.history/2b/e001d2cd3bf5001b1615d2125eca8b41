@@ -1,0 +1,11 @@
+package com.springboot.springsecurityservice;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class SecurityController {
+
+	public String getMessage() {
+		return "Hello";
+	}
+}

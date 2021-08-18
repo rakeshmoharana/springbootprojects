@@ -1,0 +1,5 @@
+package com.movies.moviecatalogueservice.model;
+
+public class UserRating {
+
+}

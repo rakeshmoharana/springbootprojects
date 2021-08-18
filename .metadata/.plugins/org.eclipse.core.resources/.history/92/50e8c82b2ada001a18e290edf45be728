@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package io.javabrains.springbootstarter.department;
+
+/**
+ * @author Rakesh
+ *
+ */
+public class DepartmentsService {
+
+}

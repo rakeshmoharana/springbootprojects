@@ -1,0 +1,5 @@
+package com.zuul.training.zuulproducer;
+
+public class TestController {
+
+}

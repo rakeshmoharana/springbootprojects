@@ -1,0 +1,5 @@
+package com.moviesinfo.movieinfoservice.model;
+
+public class MovieSummary {
+
+}

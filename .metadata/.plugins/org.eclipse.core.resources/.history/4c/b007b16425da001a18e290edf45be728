@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package io.javabrains.springbootstarter.location;
+
+/**
+ * @author Rakesh
+ *
+ */
+public class Locations {
+
+	/**
+	 * 
+	 */
+	public Locations() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

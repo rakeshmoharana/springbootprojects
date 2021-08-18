@@ -1,0 +1,26 @@
+
+public class MySyncApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("======================== Start ====================");
+		
+		
+		Print p = new Print();
+		p.printDoc(10, "Issant_profile .pdf");
+		
+
+		System.out.println("======================== End ====================");
+	}
+
+}
+
+
+class Print{
+	void printDoc(int numOfCopies, String docName) {
+		for (int i=0; i<numOfCopies;i++) {
+			System.out.println(">> Printing "+docName+" "+i);
+		}
+	}
+}

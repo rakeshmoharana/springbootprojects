@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package io.javabrains.springbootstarter.department;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author Rakesh
+ *
+ */
+@RestController
+public class DepartmentsController {
+
+	/**
+	 * 
+	 */
+	public DepartmentsController() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	private DepartmentsService departmentsService;
+	
+	public List<Departments> getAllDepartments(){
+		departmentsService.getAllDepartments();
+	}
+
+}

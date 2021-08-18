@@ -1,0 +1,27 @@
+package com.springboot.jpaonetomaymanytooone;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DepartmentController {
+	
+	@Autowired
+	private DepartmentRepository departmentRepo;
+	
+	@RequestMapping("/getDepartments")
+	public ResponseEntity<List<DepartmentEntity>> getDepartments(){
+		return new ResponseEntity<List<DepartmentEntity>>(departmentRepo.findAll(),HttpStatus.OK);
+	}
+	
+	@RequestMapping("/deleteDepartment")
+	public ResponseEntity<DepartmentEntity> deleteDepartment(@ResponseBody DepartmentEntity dept){
+		return new ResponseEntity<DepartmentEntity>(departmentRepo.save(dept),HttpStatus.OK);
+	}
+}

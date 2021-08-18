@@ -1,0 +1,19 @@
+package com.springboot.paginationsortingservice;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class PaginationAndSortingController {
+	
+	@Autowired
+	private EmployeeService empService;
+	
+	public ResponseEntity<List<Employee>> getEmployees(){
+		
+	}
+	
+}

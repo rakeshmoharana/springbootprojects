@@ -1,0 +1,29 @@
+package com.springboot.jpaonetomaymanytooone;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="EMPLOYEES")
+public class EmployeeEntity {
+	@Id
+	@Column(name = "employee_id")
+	private Integer employeeId;
+
+	@Column(name = "first_Name")
+	private String firstName;
+	
+	@Column(name = "last_Name")
+	private String lastName;
+
+	@Column(name = "email")
+	private String email;
+
+	@Column(name = "phone_Number")
+	private String phoneNumber;
+
+	@Column(name = "department_Id")
+	private Integer departmentId;
+}

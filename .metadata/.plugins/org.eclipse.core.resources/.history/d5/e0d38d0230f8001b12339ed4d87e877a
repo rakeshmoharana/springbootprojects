@@ -1,0 +1,56 @@
+package com.springboot.springsecurityjwt;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+@EnableWebSecurity
+public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	private JwtRequestFilter jwtFilter;
+	
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println(this.getClass().toString() + " -- " + this.getClass().getEnclosingMethod());
+
+		http.csrf().disable()
+		.authorizeRequests().antMatchers("/authenticate").permitAll()
+		.anyRequest().authenticated()
+		.and().sessionManagement()
+		.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+		http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
+	}
+
+	@Autowired
+	MyUserDetailService myUserDetailsService;
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println(this.getClass().toString() + " -- " + this.getClass().getEnclosingMethod());
+
+		auth.userDetailsService(myUserDetailsService);
+	}
+
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		System.out.println(this.getClass().toString() + " -- " + this.getClass().getEnclosingMethod());
+		return NoOpPasswordEncoder.getInstance();
+	}
+
+	@Bean
+	@Override
+	public AuthenticationManager authenticationManagerBean() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println(this.getClass().toString() + " -- " + this.getClass().getEnclosingMethod());
+		return super.authenticationManagerBean();
+	}
+}

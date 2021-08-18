@@ -1,0 +1,11 @@
+import java.util.Map;
+import java.util.TreeMap;
+
+public class TreeMapClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Map<Person, String> treeMap = new TreeMap<Person>((p1,p2)->p1.firstName()<p2.firstName());
+	}
+
+}

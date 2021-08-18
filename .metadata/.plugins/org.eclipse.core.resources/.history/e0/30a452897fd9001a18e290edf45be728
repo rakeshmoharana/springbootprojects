@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package io.javabrains.springbootstarter.course;
+
+import org.springframework.data.repository.CrudRepository;
+
+/**
+ * @author Rakesh
+ *
+ */
+public interface TopicRepository extends CrudRepository<Topic, String>{
+
+}

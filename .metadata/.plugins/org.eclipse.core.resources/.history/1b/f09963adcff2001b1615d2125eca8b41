@@ -1,0 +1,2 @@
+spring.application.name=zuul-producer
+eureka.client.serviceUrl.defaultZone=http://localhost:9761/eureka

@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package io.javabrains.springbootstarter.department;
+
+import org.springframework.data.repository.CrudRepository;
+
+/**
+ * @author Rakesh
+ *
+ */
+public interface DetartmentsRepository extends CrudRepository<Departments, Integer> {
+
+}

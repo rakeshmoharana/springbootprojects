@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package io.javabrains.springbootstarter.department;
+
+/**
+ * @author Rakesh
+ *
+ */
+public class DepartmentsController {
+
+	/**
+	 * 
+	 */
+	public DepartmentsController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

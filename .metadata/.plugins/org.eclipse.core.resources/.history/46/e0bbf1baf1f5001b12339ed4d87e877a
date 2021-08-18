@@ -1,0 +1,34 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
+import java.util.Stack;
+import java.util.Vector;
+
+public class AllSetClasses {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		Set<String> l = Arrays.asSet("rakesh","Payal","Rajesh");
+		Set<String> hashSet = new HashSet<String>();
+		hashSet.addAll(Arrays.asList("rakesh","Payal","Rajesh"));
+		
+		hashSet.addAll(l);
+//		linkedList.add
+		System.out.println("hashSet >> "+hashSet);
+		
+	Vector vector = new Vector<String>();
+	vector.addAll(l);
+	
+	System.out.println("vector >> "+vector);
+	
+	Stack<String> stack = new Stack<String>();
+	stack.addAll(l);
+	stack.push("jdfh");
+	stack.pop();
+	System.out.println("stack >> "+stack);
+	
+	}
+
+}

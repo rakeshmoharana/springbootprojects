@@ -1,0 +1,11 @@
+package com.springboot.tutorial.httpsservice;
+
+@RestController
+public class HttpsDemoController {
+
+	RequestMapping("/hello")
+	public String getHello() {
+		return "Hello";
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.springboot.tutorial.httpsservice;
+
+public class HttpsDemoController {
+
+}

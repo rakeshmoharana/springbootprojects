@@ -1,0 +1,3 @@
+server.port=8063
+server.ssl.enabled=true
+server.key-store=myservice.jks

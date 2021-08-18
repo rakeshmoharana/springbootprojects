@@ -1,0 +1,5 @@
+package com.lambda.training;
+
+public interface Greeting {
+
+}

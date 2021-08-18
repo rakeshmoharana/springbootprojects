@@ -1,0 +1,13 @@
+1596895174755	Copy package
+1596895238225	Rename type 'Topic'
+1596895257583	Rename type 'TopicController'
+1596895279958	Rename type 'TopicRepository'
+1596895310664	Rename type 'TopicService'
+1596895409116	Rename field 'topicRepository'
+1596895476608	Rename method 'deleteTopic'
+1596895583341	Rename method 'getAllTopics'
+1596895630559	Rename method 'getTopic'
+1596895653355	Rename method 'addTopic'
+1596895666905	Rename local variable 'topic'
+1596895683099	Rename local variable 'reqTopic'
+1596895799987	Rename field 'topicService'

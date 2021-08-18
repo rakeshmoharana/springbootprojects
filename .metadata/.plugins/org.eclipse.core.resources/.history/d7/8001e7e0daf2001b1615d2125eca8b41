@@ -1,0 +1,5 @@
+package com.zuul.training.zuulconsumer;
+
+public interface ConsumerService {
+
+}

@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package io.javabrains.springbootstarter.department;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import io.javabrains.springbootstarter.topic.Topic;
+
+/**
+ * @author Rakesh
+ *
+ */
+@Service
+public class DepartmentsService {
+	
+	public DepartmentsService() {
+		
+	}
+
+	private DepartmentsRepository departmentsRepository;
+	
+	public List<Departments> getAllDepartments(){
+		List<Departments> departments=new ArrayList<Departments>();
+		departmentsRepository.findAll().forEach(departments::add);
+		return departments;
+	}
+}

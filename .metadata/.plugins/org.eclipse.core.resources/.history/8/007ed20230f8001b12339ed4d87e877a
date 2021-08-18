@@ -1,0 +1,21 @@
+package com.springboot.springsecurityjwt;
+
+public class AuthenticationResponse {
+ public final String jwt;
+
+public AuthenticationResponse(String jwt) {
+	
+	super();
+	System.out.println(this.getClass().toString() + " -- " + this.getClass().getEnclosingMethod());
+	this.jwt = jwt;
+}
+
+/**
+ * @return the jwt
+ */
+public String getJwt() {
+	return jwt;
+}
+
+
+}

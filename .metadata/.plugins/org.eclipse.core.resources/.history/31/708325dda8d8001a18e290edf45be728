@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package io.javabrains.springbootstarter.topic;
+
+/**
+ * @author Rakesh
+ *
+ */
+public class TopicRepository {
+
+}

@@ -1,0 +1,5 @@
+package com.springboot.training.boottransaction.model;
+
+public class EmployeeModel {
+
+}

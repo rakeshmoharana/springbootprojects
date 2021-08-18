@@ -1,0 +1,5 @@
+package com.springboot.tutorial.springsecurityserviceclient;
+
+public class SecuredClientService {
+
+}

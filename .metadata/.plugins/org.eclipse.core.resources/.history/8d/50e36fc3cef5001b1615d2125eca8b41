@@ -1,0 +1,29 @@
+package com.springboot.springsecurityjwt;
+
+import java.io.IOException;
+
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+public class JwtRequestFilter extends OncePerRequestFilter {
+
+	@Autowired
+	JwtUtil jwtUtil;
+	
+	@Autowired
+	MyUserDetailService userDetailsService;
+	// This method will take the jwt token and validate if it is correct
+	@Override
+	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		 
+		
+	}
+
+}

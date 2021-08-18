@@ -1,0 +1,13 @@
+package com.springboot.training.boottransaction.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.springboot.training.boottransaction.service.EmployeeService;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService{
+	@Override
+	public void insertEmployee() {
+		
+	}
+}

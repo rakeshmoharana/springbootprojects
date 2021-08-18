@@ -1,0 +1,11 @@
+package com.lambda.training;
+
+public class HelloWorldGreeting implements Greeting {
+
+	@Override
+	public void perform() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

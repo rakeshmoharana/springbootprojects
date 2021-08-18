@@ -1,0 +1,32 @@
+package com.springboot.paginationsortingservice;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+@Service
+public class EmployeeServiceImpl implements EmployeeService{
+
+	@Autowired
+	private EmployeeRepository empRepo;
+	
+	@Override
+	public List<Employee> getEmployees() {
+		// TODO Auto-generated method stub
+//		return  (List<Employee>)Lists.newArrayList(empRepo.findAll());
+//		
+//		return empRepo.findAll();
+		List<Employee> empList=new ArrayList<Employee>();
+//		 empRepo.findAll().forEach(a -> {
+//			 if(empList==null) {
+//				 empList = new ArrayList<Employee>();
+//			 }
+//			 empList.add(a);
+//			});
+		 empRepo.findAll().forEach(empList::add);
+		 empList.forEach(System.out::println);
+		return empList;
+	}
+
+}

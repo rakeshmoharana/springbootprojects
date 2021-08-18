@@ -1,0 +1,30 @@
+package com.zuul.training.zuulconsumer;
+
+import java.io.IOException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+public class ConsumerServiceImpl implements ConsumerService{
+
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	@Override
+	public Employee getEmployee() {
+		return restTemplate.getForObject("http://producer-app/employee",Employee.class);
+	}
+	
+//	private static HttpEntity<?> getHeaders() throws IOException{
+//		HttpHeaders headers = new HttpHeaders();
+//		headers.set("Accept", MediaType.APPLICATION_JSON_VALUE);
+//		return new HttpEntity<?>(headers);
+//	}
+
+}
